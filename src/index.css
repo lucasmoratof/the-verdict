@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 45 25% 96%;      /* Parchment #F8F7F4 */
+    --foreground: 0 0% 12%;        /* Charcoal #1E1E1E */
+    --card: 45 25% 97%;
+    --card-foreground: 0 0% 12%;
+    --popover: 45 25% 97%;
+    --popover-foreground: 0 0% 12%;
+    --primary: 154 76% 17%;        /* Verdict Green #0A4F33 */
+    --primary-foreground: 45 25% 96%;
+    --secondary: 48 18% 85%;       /* Lighter Stone */
+    --secondary-foreground: 0 0% 12%;
+    --muted: 48 18% 90%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 154 76% 22%;         /* Lighter green */
+    --accent-foreground: 45 25% 96%;
+    --destructive: 2 63% 64%;      /* Terracotta Red #D9534F */
+    --destructive-foreground: 45 25% 96%;
+    --border: 48 18% 90%;          /* Stone #EAE8E1 */
+    --input: 48 18% 90%;
+    --ring: 154 76% 17%;
+    --radius: 0.8rem;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    /* This is the corrected block */
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: theme('fontFamily.sans');
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
